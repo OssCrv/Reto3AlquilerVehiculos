@@ -9,13 +9,25 @@ public abstract class Vehiculo {
     private double tarifa;
     private boolean estaDisponible;
 
-    public Vehiculo(String matricula, String marca, String modelo, String color, double tarifa, boolean estaDisponible) {
+    public Vehiculo(String matricula, String marca, String modelo, String color, double tarifa) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.tarifa = tarifa;
-        this.estaDisponible = estaDisponible;
+        this.estaDisponible = true; //Por defecto estará disponible al crear el registro
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "matricula='" + matricula + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", tarifa=" + tarifa +
+                ", estaDisponible=" + estaDisponible +
+                '}';
     }
 
     public Vehiculo(String matricula) {

@@ -2,7 +2,7 @@ package com.carvajalossman.model;
 
 import com.carvajalossman.model.vehiculos.Vehiculo;
 
-public class EmpresaAlquierVehiculos {
+public class EmpresaAlquilerVehiculos {
 
     private String cif;
     private String nombre;
@@ -14,20 +14,43 @@ public class EmpresaAlquierVehiculos {
     private int totalAlquileres;
     private AlquilerVehiculo[] alquieresVehiculos;
 
+    public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb) {
+        this.cif = cif;
+        this.nombre = nombre;
+        this.paginaWeb = paginaWeb;
+
+        this.clientes = new Cliente[50];
+        this.totalClientes = 0;
+        this.vehiculos = new Vehiculo[50];
+        this.totalVehiculos = 0;
+    }
+
     public void registrarCliente(Cliente cliente){
-        //TODO
+        this.clientes[this.totalClientes] = cliente;
+        this.totalClientes++;
     }
 
     public void registrarVehiculo(Vehiculo vehiculo){
-        //TODO
+        this.vehiculos[this.totalVehiculos] = vehiculo;
+        this.totalVehiculos++;
     }
 
     public void imprimirClientes(){
-        //TODO
+        for(Cliente cliente:this.clientes){
+            if (cliente == null){
+                continue;
+            }
+            System.out.println(cliente);
+        }
     }
 
     public void imprimirVehiculos() {
-        //TODO
+        for(Vehiculo vehiculo:this.vehiculos){
+            if (vehiculo == null){
+                continue;
+            }
+            System.out.println(vehiculo);
+        }
     }
 
     public void getCliente(String nif){
@@ -42,9 +65,9 @@ public class EmpresaAlquierVehiculos {
         //TODO
     }
 
-    public EmpresaAlquierVehiculos(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes,
-                                   int totalVehiculos, Vehiculo[] vehiculos, int totalAlquileres,
-                                   AlquilerVehiculo[] alquieresVehiculos) {
+    public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes,
+                                    int totalVehiculos, Vehiculo[] vehiculos, int totalAlquileres,
+                                    AlquilerVehiculo[] alquieresVehiculos) {
         this.cif = cif;
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;

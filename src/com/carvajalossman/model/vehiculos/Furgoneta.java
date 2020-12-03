@@ -5,9 +5,8 @@ public class Furgoneta extends Vehiculo{
     private int carga;
     private int volumen;
 
-    public Furgoneta(String matricula, String marca, String modelo, String color, double tarifa, boolean estaDisponible,
-                     int carga, int volumen) {
-        super(matricula, marca, modelo, color, tarifa, estaDisponible);
+    public Furgoneta(String matricula, String marca, String modelo, String color, double tarifa, int carga, int volumen) {
+        super(matricula, marca, modelo, color, tarifa);
         this.carga = carga;
         this.volumen = volumen;
     }

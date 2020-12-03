@@ -13,19 +13,19 @@ public class GeneradorAleatorio {
 
     public static Deportivo vehiculoDeportivo(){
         return new Deportivo(matricula(), marca(), modelo(), color(), numeroDouble(10_000d, 99_999_999d),
-                true, entero(100));
+                entero(100));
     }
 
 
     public static Furgoneta vehiculoFurgoneta(){
         return new Furgoneta(matricula(), marca(), modelo(), color(), numeroDouble(10_000d, 99_999_999d),
-                true, entero(500), entero(1000));
+                entero(500), entero(1000));
     }
 
 
     public static Turismo vehiculoTurismo(){
         return new Turismo(matricula(), marca(), modelo(), color(), numeroDouble(10_000d, 99_999_999d),
-                true, entero(10), booleano());
+                entero(10), booleano());
     }
 
 
@@ -136,7 +136,7 @@ public class GeneradorAleatorio {
 
     public static double numeroDouble(double min, double max) {
         double range = max - min + 1;
-        return (double)(Math.random() * range) + min;
+        return (Math.random() * range) + min;
     }
 
     public static int entero(int min, int max) {

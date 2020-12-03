@@ -13,6 +13,15 @@ public class Cliente {
         this.apellido = apellido;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nif='" + nif + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                '}';
+    }
+
     public Cliente(String nif) {
         this.nif = nif;
     }
