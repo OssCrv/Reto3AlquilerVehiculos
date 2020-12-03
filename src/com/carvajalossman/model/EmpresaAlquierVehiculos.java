@@ -14,6 +14,34 @@ public class EmpresaAlquierVehiculos {
     private int totalAlquileres;
     private AlquilerVehiculo[] alquieresVehiculos;
 
+    public void registrarCliente(Cliente cliente){
+        //TODO
+    }
+
+    public void registrarVehiculo(Vehiculo vehiculo){
+        //TODO
+    }
+
+    public void imprimirClientes(){
+        //TODO
+    }
+
+    public void imprimirVehiculos() {
+        //TODO
+    }
+
+    public void getCliente(String nif){
+        //TODO
+    }
+
+    public void getVehiculo(String matricula){
+        //TODO
+    }
+
+    public void recibirVehiculo(String matricula){
+        //TODO
+    }
+
     public EmpresaAlquierVehiculos(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes,
                                    int totalVehiculos, Vehiculo[] vehiculos, int totalAlquileres,
                                    AlquilerVehiculo[] alquieresVehiculos) {
